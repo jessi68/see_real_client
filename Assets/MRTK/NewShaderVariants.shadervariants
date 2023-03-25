@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NewShaderVariants
+  m_Shaders:
+  - first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: UNITY_HDR_ON
+        passType: 0
+  - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: UNITY_HDR_ON
+        passType: 0
+  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 5bdea20278144b11916d77503ba1467a, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL LIGHTPROBE_SH UNITY_HDR_ON _DIRECTIONAL_LIGHT _HOVER_LIGHT
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH UNITY_HDR_ON _ALPHABLEND_ON _BORDER_LIGHT_USES_HOVER_COLOR
+          _DISABLE_ALBEDO_MAP _INNER_GLOW _METALLIC_TEXTURE_ALBEDO_CHANNEL_A _NEAR_LIGHT_FADE
+          _NEAR_PLANE_FADE
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON _BORDER_LIGHT
+          _BORDER_LIGHT_USES_HOVER_COLOR _DISABLE_ALBEDO_MAP _HOVER_LIGHT _INNER_GLOW
+          _PROXIMITY_LIGHT
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON _BORDER_LIGHT_REPLACES_ALBEDO
+          _DISABLE_ALBEDO_MAP _IRIDESCENCE _METALLIC_TEXTURE_ALBEDO_CHANNEL_A _PROXIMITY_LIGHT
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON _ALPHABLEND_ON
+          _BORDER_LIGHT _BORDER_LIGHT_USES_HOVER_COLOR _DISABLE_ALBEDO_MAP _HOVER_LIGHT
+          _METALLIC_TEXTURE_ALBEDO_CHANNEL_A _NEAR_LIGHT_FADE _NEAR_PLANE_FADE _PROXIMITY_LIGHT
+          _PROXIMITY_LIGHT_TWO_SIDED
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON _BORDER_LIGHT
+          _BORDER_LIGHT_REPLACES_ALBEDO _DISABLE_ALBEDO_MAP _IRIDESCENCE _METALLIC_TEXTURE_ALBEDO_CHANNEL_A
+          _ROUND_CORNERS
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON _DIRECTIONAL_LIGHT
+          _DISABLE_ALBEDO_MAP _HOVER_LIGHT _PROXIMITY_LIGHT _SPECULAR_HIGHLIGHTS
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH UNITY_HDR_ON _DIRECTIONAL_LIGHT _HOVER_LIGHT
+          _REFLECTIONS _SPECULAR_HIGHLIGHTS
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH UNITY_HDR_ON _BORDER_LIGHT_USES_HOVER_COLOR
+          _DIRECTIONAL_LIGHT _EMISSION _HOVER_LIGHT _REFLECTIONS _SPECULAR_HIGHLIGHTS
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH UNITY_HDR_ON _DIRECTIONAL_LIGHT _HOVER_LIGHT
+          _NORMAL_MAP _REFLECTIONS _SPECULAR_HIGHLIGHTS
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON _BORDER_LIGHT
+          _DISABLE_ALBEDO_MAP _INNER_GLOW _IRIDESCENCE _ROUND_CORNERS _SPECULAR_HIGHLIGHTS
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH UNITY_HDR_ON _BORDER_LIGHT_USES_HOVER_COLOR
+          _DIRECTIONAL_LIGHT _DISABLE_ALBEDO_MAP _HOVER_LIGHT _LIGHTMAPPING_REALTIME
+          _PROXIMITY_LIGHT _SPECULAR_HIGHLIGHTS
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON _BORDER_LIGHT_USES_HOVER_COLOR
+          _DIRECTIONAL_LIGHT _DISABLE_ALBEDO_MAP _HOVER_LIGHT _LIGHTMAPPING_REALTIME
+          _PROXIMITY_LIGHT _SPECULAR_HIGHLIGHTS
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH UNITY_HDR_ON _ALPHATEST_ON _SPECULAR_HIGHLIGHTS
+          _USECOLOR_ON _USEMAINTEX_ON _USE_SSAA
+        passType: 4
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH UNITY_HDR_ON USE_GLOBAL_LEFT_INDEX_ON
+          USE_GLOBAL_RIGHT_INDEX_ON _ALPHABLEND_ON _BLOB_ENABLE_2__ON _BLOB_ENABLE__ON
+          _BORDER_LIGHT _DISABLE_ALBEDO_MAP _ENABLE_FADE__ON _NEAR_LIGHT_FADE _NEAR_PLANE_FADE
+          _SMOOTH_ACTIVE_FACE__ON
+        passType: 4
+  - first: {fileID: 4800000, guid: 1c504b73bf66872479cd1215fb5ce0fe, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: UNITY_HDR_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
