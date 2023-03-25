@@ -49,6 +49,7 @@ public class ObjectManipulator : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("object manipulator update");
         Vector3 controllerPos = OVRInput.GetLocalControllerPosition(controller);
         Quaternion controllerRot = OVRInput.GetLocalControllerRotation(controller);
 
@@ -80,6 +81,7 @@ public class ObjectManipulator : MonoBehaviour
             grabTime -= Time.deltaTime * 5;
             grabTime = Mathf.Clamp01(grabTime);
         }
+        Debug.Log("update in object manipulator");
     }
 
     void GrabHoverObject(GameObject grbObj, Vector3 controllerPos, Quaternion controllerRot)
