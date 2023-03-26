@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: 4c2b04b2e7d62a545937cbec96a3510d
+ModelImporter:
+  serializedVersion: 20300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 250ml
+    second: {fileID: 2100000, guid: c0a313ae561029647820c1c074b6be98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: ea9960cbd84adeb4dabe72c71584e243, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass - Frosted - Texture
+    second: {fileID: 2100000, guid: f9046a2089ab870418a2c956eef8c0c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: caadf473f4838084181cf749611be951, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic
+    second: {fileID: 2100000, guid: 26cd1202552588e4aa16ec67374cf568, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic Clipboard
+    second: {fileID: 2100000, guid: d66f24a9ae5f189408b909fb63dbe182, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Simple Metal
+    second: {fileID: 2100000, guid: 07359521708f96043bb4419a42e1565c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tray
+    second: {fileID: 2100000, guid: 2b29d243881356142b93421f1d80d0e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: beaker
+    second: {fileID: 2100000, guid: e9564349621292a4eaad724b4e298349, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: button_01
+    second: {fileID: 2100000, guid: 2558de997ce12d64199df7b418ff41b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: button_02
+    second: {fileID: 2100000, guid: 48c679c03d7c61b4ab66315bcde82730, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquid_black
+    second: {fileID: 2100000, guid: d38da3b2fa391d84792fe33f7497c43e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquid_blue
+    second: {fileID: 2100000, guid: 3a619a0ab75b35d4d811093d35aaf0a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquid_orange
+    second: {fileID: 2100000, guid: 0f6b5d0ebae1a4f45b6f2a97eb00db70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquid_purple
+    second: {fileID: 2100000, guid: eeeb31b575dd7d6439a672964dcfbbe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquid_red
+    second: {fileID: 2100000, guid: 2fd5efe65260c904bb68c9662fdde150, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquid_yellow
+    second: {fileID: 2100000, guid: 48001e6ad41eaea4f8b3fee9bfaacc05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_matte
+    second: {fileID: 2100000, guid: 2e830e2e2577da44399b097b7f49f3d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paper
+    second: {fileID: 2100000, guid: f98db25afbde7da4ca720ec41944cfdb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: patternA_liquid_01
+    second: {fileID: 2100000, guid: dc914044f4e4cbb4981fa43a3af33a63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: patternA_liquid_02
+    second: {fileID: 2100000, guid: 94b5e5f186b7cfa4f91fbdee5b03b576, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: patternA_liquid_03
+    second: {fileID: 2100000, guid: 18730aadb0c34b442bd4ab8f006ce4b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: patternB_liquid_01
+    second: {fileID: 2100000, guid: d780b5f5e49b5e1428ae9160eca55ea0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: patternB_liquid_02
+    second: {fileID: 2100000, guid: 0e980f301c2ebad4d902de78315e7c27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: patternB_liquid_03
+    second: {fileID: 2100000, guid: 730250537ab66bb4ca1311aede3eb9d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pen_black
+    second: {fileID: 2100000, guid: c31e4a47677fb2f4a9434c9e2382fddb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pen_gold
+    second: {fileID: 2100000, guid: 1ffb7a09cf8a8904792fb30d540e0b3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pen_head
+    second: {fileID: 2100000, guid: 01d9af460b238bd49b61ab88be20221b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic_white
+    second: {fileID: 2100000, guid: b0952ef2497fd8949991f47156c48c38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rose_01_06
+    second: {fileID: 2100000, guid: 1fa8ea2b2fc021748ad39b484481a5db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space_base
+    second: {fileID: 2100000, guid: be4109b5cc4d60a4898ba3a75620328d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spoid_rubber
+    second: {fileID: 2100000, guid: 22fb210a925a8b947ad6329915ea8590, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tulip_single_leaf
+    second: {fileID: 2100000, guid: 4c084659c8c0e794fb11333cdbad9d41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tulip_single_stem
+    second: {fileID: 2100000, guid: efd6c5cd29ba1a64a8f84aab88657917, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 250 mL ER Texture
+    second: {fileID: 2800000, guid: 80254de5a70d8b64daa438a0944b13e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Grass001_2K_Color
+    second: {fileID: 2800000, guid: 2192850268131d3448513b243169669d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Grass001_2K_NormalDX
+    second: {fileID: 2800000, guid: efc0cec6f8d57b1429a764320d56af0b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TrayAlbedo
+    second: {fileID: 2800000, guid: 9aeea0cf63de75f4aafa90cb2d3b4b2a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TrayMetal
+    second: {fileID: 2800000, guid: 0098f2fd44494fd409d102fee5412e1a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TrayNormal
+    second: {fileID: 2800000, guid: d0404368766c52046a3a06b9cc8eadb9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: TrayRough
+    second: {fileID: 2800000, guid: b0497923ca6cc954dada9ad854d2a018, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: istockphoto-623677158-612x612.jpg
+    second: {fileID: 2800000, guid: a456cf64339329a4ea5610a80128f7d4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paper 02
+    second: {fileID: 2800000, guid: 642752e7761fe9c469b073f48e5dd248, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: test_alpha
+    second: {fileID: 2800000, guid: 2385efd762650ec47a2aaeb71371e590, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: test_color
+    second: {fileID: 2800000, guid: e789b567fdc83684b900a0ce693864f8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tulip_single_leaf
+    second: {fileID: 2800000, guid: 980720145dd9c1741baca8d6f3827a26, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tulip_single_leaf_nor
+    second: {fileID: 2800000, guid: 9c4d6db5c61bcb7409b3c4d3c2d0b008, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tulip_single_stem
+    second: {fileID: 2800000, guid: f09e47100052aa9459a0c4a069dfa269, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tulip_single_stem_nor
+    second: {fileID: 2800000, guid: b76bac6492021c440b16b2fce49a380c, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
