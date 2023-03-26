@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PatternPaper : MonoBehaviour
 {
-    private bool patternChanged = false;
 
     // Start is called before the first frame update
     void Start()
@@ -15,15 +14,12 @@ public class PatternPaper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!patternChanged) {
-            changePattern();
-            patternChanged = true;
-        }
+
     }
 
-    public void changePattern()
+    public void changePattern(string flowerFile, GameObject myFlower)
     {
-        byte[] byteTexture = System.IO.File.ReadAllBytes("./Assets/Resources/Textures/test.png");
+        byte[] byteTexture = System.IO.File.ReadAllBytes(flowerFile);
         Texture2D pattern = new Texture2D(0, 0);
         pattern.LoadImage(byteTexture);
         gameObject.GetComponent<Renderer>().material.SetTexture("_BaseMap", pattern);

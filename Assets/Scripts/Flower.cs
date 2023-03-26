@@ -10,21 +10,23 @@ public class Flower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FlowerPattern = transform.GetChild(1).gameObject;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!patternChanged) {
-            changePattern();
-            patternChanged = true;
-        }
+
     }
 
-    public void changePattern()
+    public void changePattern(string flowerFile, GameObject _myFlower)
     {
-        byte[] byteTexture = System.IO.File.ReadAllBytes("./Assets/Resources/Textures/test.png");
+        GameObject myFlower = Instantiate(_myFlower, new Vector3(0, 0, 0), Quaternion.identity);
+        myFlower.transform.parent = this.transform;
+        myFlower.transform.localPosition = new Vector3(0.02283556f, -0.2756133f, 0.009458799f);
+        myFlower.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
+        FlowerPattern = transform.GetChild(3).GetChild(1).gameObject;
+        byte[] byteTexture = System.IO.File.ReadAllBytes(flowerFile);
         Texture2D pattern = new Texture2D(0, 0);
         pattern.LoadImage(byteTexture);
         FlowerPattern.GetComponent<Renderer>().material.SetTexture("_BaseMap", pattern);
