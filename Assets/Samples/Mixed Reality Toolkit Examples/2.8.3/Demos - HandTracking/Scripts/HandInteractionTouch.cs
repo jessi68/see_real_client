@@ -7,8 +7,8 @@ using UnityEngine;
 
 namespace Microsoft.MixedReality.Toolkit.Examples.Demos
 {
-    [AddComponentMenu("Scripts/MRTK/Examples/HandInteractionTouch")]
-    public class HandInteractionTouch : MonoBehaviour, IMixedRealityTouchHandler
+   
+    public class HandInteractionTouch: MonoBehaviour, IMixedRealityTouchHandler
     {
         [SerializeField]
         private TextMesh debugMessage = null;

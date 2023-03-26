@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class TemporaryUI : MonoBehaviour
@@ -14,8 +15,8 @@ public class TemporaryUI : MonoBehaviour
         "[Q4] 새로운 꿈을 갖게 된 내가 가장 먼저 할 일로 가장 가까운 보기를 골라주세요."
     };
 
-    Text question;
-    public Text[]answerTexts = new Text[4];
+    public GameObject question;
+    public GameObject[]answerTexts = new GameObject[4];
     string[][] answers =    {
     new string[] {"내 삶으로 대변되는 전부이다", "내 삶 속에 녹아있는 일부이다" },
     new string [] {"나는 과정보다 목표 성취를 중요하게 여긴다 ", "나는 목표 성취보다 과정을 중요하게 여긴다"},
@@ -25,14 +26,13 @@ public class TemporaryUI : MonoBehaviour
     int currentIndex = 0;
     int[] answerNumbers;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
-        question.text = questions[currentIndex];
-        answerTexts[0].text = answers[0][0];
-        answerTexts[1].text = answers[0][1];
+        Debug.Log("Start");
+        question.transform.GetComponent<TMP_Text>().text = questions[currentIndex];
+        answerTexts[0].transform.GetComponent<TMP_Text>().text = answers[0][0];
+        answerTexts[1].transform.GetComponent<TMP_Text>().text = answers[0][1];
 
         answerNumbers = new int[4];
     }
@@ -43,10 +43,9 @@ public class TemporaryUI : MonoBehaviour
         
     }
 
-    public void clickAnswer()
+    public static void clickAnswer(int answerNumber)
     {
-        // answerNumbers[curretIndex] = answerNumber;
-        
+         answerNumbers[curretIndex] = answerNumber;
     }
 
     public void submitAnswer()
@@ -55,9 +54,9 @@ public class TemporaryUI : MonoBehaviour
         // outline 넣기 
         if (currentIndex < questions.Length)
         {
-            question.text = questions[currentIndex];
+            question.transform.GetComponent<TextMeshPro>().text = questions[currentIndex];
             for(int i = 0; i < answers[currentIndex].Length; i++) {
-                    answerTexts[i].text = answers[currentIndex][i];
+                answerTexts[i].transform.GetComponent<TextMeshPro>().text = answers[currentIndex][i];
             }
         }
         else
