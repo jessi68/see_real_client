@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class FlowerAnswer : MonoBehaviour
-{
+{ 
     public int flowerAnswerNumber;
 
     // Start is called before the first frame update
@@ -22,6 +22,7 @@ public class FlowerAnswer : MonoBehaviour
     void clickAnswer()
     {
         TMP_Text text = this.gameObject.transform.GetComponent<TMP_Text>();
+        Debug.Log(text.color);
         if(text.color == Color.red)
         {
             text.color = Color.black;

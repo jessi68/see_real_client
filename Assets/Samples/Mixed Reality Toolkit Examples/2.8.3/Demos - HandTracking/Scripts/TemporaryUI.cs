@@ -23,8 +23,8 @@ public class TemporaryUI : MonoBehaviour
     new string [] {"일어날 수 없어도, 그 자체로 의미가 있다", "일어날 수 없다면, 아무 의미 없다", "이룬다 했을 때, 내 삶에 미치는 영향이 크다", "이룬다 해도, 내 삶의 일부일 뿐이다" },
     new string [] { "두고두고 새길 수 있게 어딘가에 기록한다", "내 이야기를 들어줄 다른 사람에게 공유한다", "머릿속 어딘가에 흘러가게 내버려둔다" }
     };
-    int currentIndex = 0;
-    int[] answerNumbers;
+    static int currentIndex = 0;
+    static int[] answerNumbers;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,7 @@ public class TemporaryUI : MonoBehaviour
 
     public static void clickAnswer(int answerNumber)
     {
-         answerNumbers[curretIndex] = answerNumber;
+         answerNumbers[currentIndex] = answerNumber;
     }
 
     public void submitAnswer()
