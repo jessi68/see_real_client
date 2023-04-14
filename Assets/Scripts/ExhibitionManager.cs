@@ -57,10 +57,12 @@ public class ExhibitionManager : MonoBehaviour
     }
 
     public void generateFlowerinField() {
-        for (int k = 0; k < 8; k++) {
-            string[] names = new string[] {"이서윤", "허가영", "신민재", "허가영", "김주하", "전세윤", "김주하", "신민재"};
-            string rootdir = "./Assets/Resources/Textures";
-            string[] files = Directory.GetFiles(rootdir);
+        string[] names = new string[] {"이서윤", "허가영", "신민재", "김주하", "전세윤"};
+        string rootdir = "./Assets/Resources/Textures";
+        string[] files = Directory.GetFiles(rootdir);
+        string[] flowerFiles = new string[5];
+        GameObject[] myFlowers = new GameObject[5];
+        for (int k = 0; k < 5; k++) {
             string flowerFile = "";
             for (int i = 0; i < files.Length; i++) {
                 if (files[i].Contains(names[k])) {
@@ -80,7 +82,9 @@ public class ExhibitionManager : MonoBehaviour
                     myFlower = Flowers[i];
                 }
             }
-            FlowerField.GetComponent<FlowerField>().generateFlower(flowerFile, myFlower, k);
+            flowerFiles[k] = flowerFile;
+            myFlowers[k] = myFlower;
         }
+        FlowerField.GetComponent<FlowerField>().generateFlower(flowerFiles, myFlowers);
     }
 }

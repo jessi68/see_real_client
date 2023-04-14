@@ -17,9 +17,9 @@ public class EntrenceDoor : MonoBehaviour
         position = transform.position;
         closedPosition = transform.position;
         if(isLeftDoor) {
-            openPosition = transform.position + new Vector3(1, 0, 0);
+            openPosition = transform.position + new Vector3(0, 0, 1);
         } else {
-            openPosition = transform.position - new Vector3(1, 0, 0);
+            openPosition = transform.position - new Vector3(0, 0, 1);
         }
     }
 
@@ -32,13 +32,13 @@ public class EntrenceDoor : MonoBehaviour
     public void openDoor()
     {
         if (isLeftDoor) {
-            if (position.x < openPosition.x) {
-                position.x += 1 * Time.deltaTime;
+            if (position.z < openPosition.z) {
+                position.z += 1 * Time.deltaTime;
             }
         }
         if (!isLeftDoor) {
-            if (position.x > openPosition.x) {
-                position.x -= 1 * Time.deltaTime;
+            if (position.z > openPosition.z) {
+                position.z -= 1 * Time.deltaTime;
             }
         }
         transform.position = position;
@@ -46,13 +46,13 @@ public class EntrenceDoor : MonoBehaviour
 
     public void closeDoor() {
         if (isLeftDoor) {
-            if (position.x > closedPosition.x) {
-                position.x += (-1) * Time.deltaTime;
+            if (position.z > closedPosition.z) {
+                position.z += (-1) * Time.deltaTime;
             }
         }
         if (!isLeftDoor) {
-            if (position.x < closedPosition.x) {
-                position.x -= (-1) * Time.deltaTime;
+            if (position.z < closedPosition.z) {
+                position.z -= (-1) * Time.deltaTime;
             }
         }
         transform.position = position;
