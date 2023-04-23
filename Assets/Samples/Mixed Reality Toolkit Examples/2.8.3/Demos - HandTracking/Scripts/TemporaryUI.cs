@@ -10,13 +10,14 @@ public class TemporaryUI : MonoBehaviour
     string[] questions = new string[]
     {
         "[Q1] 꿈이 내 삶에서 \n 차지하는 비중이 \n 어느 정도라고 \n 생각하나요?",
-        "[Q2] 살면서 새로운 무언 \n 가를 시작할 때, 본인이 더 중요 \n 하게 여기는 가치는 무엇인가요?",
-        "[Q3] 최근 가지고 있었던 꿈에 대한 \n 나의 생각을 골라보세요.",
-        "[Q4] 새로운 꿈을 갖게 된 내가 \n 가장 먼저 할 일로 가장 \n 가까운 보기를 골라주세요."
+        "[Q2] 살면서 새로운 무언 \n 가를 시작할 때, 본인이 더 \n 중요 하게 여기는 가치는\n 무엇인가요?",
+        "[Q3] 최근 가지고 있었던 꿈 \n 에 대한 나의 생각을 \n 골라보세요.",
+        "[Q4] 새로운 꿈을 갖게 \n 된 내가 가장 먼저 할 \n 일로 가장 가까운 보기를 \n 골라주세요."
     };
 
     public GameObject question;
     public GameObject[]answerTexts = new GameObject[4];
+    public GameObject[] answerToggles = new GameObject[4];
     string[][] answers =    {
     new string[] {"내 삶으로 대변되는 \n 전부이다", "내 삶 속에 녹아 \n 있는 일부이다" },
     new string [] {"나는 과정보다 목표 \n 성취를 중요하게 여긴다 ", "나는 목표 성취보다 \n 과정을 중요하게 여긴다"},
@@ -35,6 +36,11 @@ public class TemporaryUI : MonoBehaviour
         answerTexts[1].transform.GetComponent<TMP_Text>().text = answers[0][1];
 
         answerNumbers = new int[4];
+
+        for(int i = 0; i < 2; i++)
+        {
+            answerToggles[i].SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -70,6 +76,16 @@ public class TemporaryUI : MonoBehaviour
             for (int i = 0; i < answers[currentIndex].Length; i++)
             {
                 answerTexts[i].transform.GetComponent<TMP_Text>().text = answers[currentIndex][i];
+            }
+
+            for(int i = 0; i < 4;i++)
+            {
+                answerToggles[i].SetActive(false);
+            }
+
+            for (int i = 0; i < answers[currentIndex].Length; i++)
+            {
+                answerToggles[i].SetActive(true);
             }
         }    
         else
