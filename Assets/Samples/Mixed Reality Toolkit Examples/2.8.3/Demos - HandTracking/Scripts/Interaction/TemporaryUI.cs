@@ -95,7 +95,6 @@ public class TemporaryUI : MonoBehaviour
                 TextWriterSingleton.addValue(answerNumbers[i].ToString());
             }
 
-            InteractionManager.MoveOnNextInteraction();
 
         }
 
