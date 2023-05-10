@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class ExhibitionManager : MonoBehaviour
 {
-
     private string Name = "신민재";
     [SerializeField]
     private GameObject Flower;
@@ -15,7 +14,14 @@ public class ExhibitionManager : MonoBehaviour
     [SerializeField]
     private GameObject FlowerField;
     [SerializeField]
+    private GameObject TCPClient;
+    [SerializeField]
     private GameObject[] Flowers;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +34,14 @@ public class ExhibitionManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void finishGeneration() {
+        generateFlower();
+    }
+
+    public void endOfExperiment(string answers) {
+        TCPClient.GetComponent<TCPClient>().Send(answers);
     }
 
     public void generateFlower() {
