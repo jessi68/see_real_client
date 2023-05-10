@@ -66,6 +66,7 @@ public class ObjectManipulator : MonoBehaviour
 
         if (grabObject)
         {
+            Debug.Log("grabb");
             grabTime += Time.deltaTime * 5;
             grabTime = Mathf.Clamp01(grabTime);
             ManipulateObject(grabObject, controllerPos, controllerRot);
