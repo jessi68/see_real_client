@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 72c93d43813b843fc8ab80157eca5512
+ModelImporter:
+  serializedVersion: 20300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: branch_leaf1
+    second: {fileID: 2100000, guid: cfb2ab9c292664d68ae7fba0f80746cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: branch_leaf2
+    second: {fileID: 2100000, guid: f1f44c9f61f4c4bf2adf04716247b91b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flower_petal_basic
+    second: {fileID: 2100000, guid: 3965eaa7b14b4469ea9513fb849a46c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: minitree&branch_stem
+    second: {fileID: 2100000, guid: d552cda8b2a2545ff9dc961e96c3c1b1, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 1 bark
+    second: {fileID: 2800000, guid: b0fb1238516e84445b88ae1b37918a81, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 1 bark normal
+    second: {fileID: 2800000, guid: 4d1263f028ca94fb09187fccf8ddf08a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 1 leaf 2
+    second: {fileID: 2800000, guid: 3d46de356a9154f01a18715aa0fd12c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 1 leaf 4
+    second: {fileID: 2800000, guid: e2d623e3fe73f4d588a8eda79f81b8f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 1 leaf Normal
+    second: {fileID: 2800000, guid: c63cf36059cb1475dbea2dea7d58cef0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 1 leaf Opacity
+    second: {fileID: 2800000, guid: 0c0e9aee16fba4f42b664bbdd9683a50, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 2 leaf Normal
+    second: {fileID: 2800000, guid: ba87261058b3141a0ad7ddd640630638, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 2 leaf Opacity
+    second: {fileID: 2800000, guid: 906af1e8aa5e3432dae7e0fb48d21c73, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 4 leaf 1
+    second: {fileID: 2800000, guid: 4ad037ae93dc549b2b14a8ce95677948, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 4 leaf 2
+    second: {fileID: 2800000, guid: 720e7cd1921d04863b55662b01408f51, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 4 leaf 3
+    second: {fileID: 2800000, guid: 5f1cf7359ac824b4cb809fcf93941bef, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 4 leaf 4
+    second: {fileID: 2800000, guid: b74f2b3f7096a495f93a2005ea28e29c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 4 leaf Normal
+    second: {fileID: 2800000, guid: 9c4db2d9f1723440f91f769824e2f823, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Collection plant vol 241 plant 4 leaf Opacity
+    second: {fileID: 2800000, guid: 0ef1f1e9e621b474da2d050cf5361a17, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion2
+    second: {fileID: 2800000, guid: cf066ed15d191484cb01f87954555d7d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion2_alpha
+    second: {fileID: 2800000, guid: f02e4e76dbfee400caa118616c043bdd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion3
+    second: {fileID: 2800000, guid: 79886838d030543c09d3b713d8845821, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion3_alpha
+    second: {fileID: 2800000, guid: d5f6651f07a17470d88f2ba090003111, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion4
+    second: {fileID: 2800000, guid: b2688c736745643d69c0c49df9f8a42e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion4_alpha
+    second: {fileID: 2800000, guid: 56dec19f592eb44789a1a0249f7d89fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion5
+    second: {fileID: 2800000, guid: 9f4578edae9804d4dbff8eb1a89d508e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion5_alpha
+    second: {fileID: 2800000, guid: 9a3cda41cec7f430092bef7c3bb52835, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dandelion_02_petal_1
+    second: {fileID: 2800000, guid: a5251729ff92040f4ae8fb2192a282cd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: test 03_color
+    second: {fileID: 2800000, guid: 5b0d611c88c4e4f4889c6927738b471f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: test-03_alpha
+    second: {fileID: 2800000, guid: cdbe9c37783604a4b8a363fd4bc55029, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

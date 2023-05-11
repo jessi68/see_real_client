@@ -216,6 +216,7 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Update()
 	{
+		Debug.Log("player update");
 		if (!playerControllerEnabled)
 		{
 			if (OVRManager.OVRManagerinitialized)
