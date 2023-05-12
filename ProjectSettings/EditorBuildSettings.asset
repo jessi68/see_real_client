@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MRTK/Scenes/HandInteractionExamples 1.unity
+    guid: d9927a4696e65bc4ca77b15cf7fa06e3
+  - enabled: 1
+    path: Assets/MRTK/Scenes/space_ver02_step03.unity
+    guid: 9d85e538c6c53424facf13d1758be6f1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fe2c5d6236d12f14388384c736baf898, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0b1bcf885d5ac184797edaeeeb215196, type: 2}
