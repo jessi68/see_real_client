@@ -13,12 +13,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Plastic Clipboard
-    second: {fileID: 2100000, guid: 0361be453bb9c4bd9b9331e90332c6d0, type: 2}
+    second: {fileID: 2100000, guid: 1ff3520e0b365bb48a03cfa32beb9b4d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Simple Metal
-    second: {fileID: 2100000, guid: 5d66ab663926e46fdae434c046a55295, type: 2}
+    second: {fileID: 2100000, guid: 4a7f1091c7a37cf42b8d78c86d965746, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

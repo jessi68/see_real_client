@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/space_ver03_final.unity
+    guid: 2e47522c212a1493fbe61d0938dccd44
+  - enabled: 1
     path: Assets/MRTK/Scenes/HandInteractionExamples 1.unity
     guid: d9927a4696e65bc4ca77b15cf7fa06e3
   - enabled: 1

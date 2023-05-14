@@ -13,7 +13,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: beaker
-    second: {fileID: 2100000, guid: ee612aa3e2af149daae9f3ede078772a, type: 2}
+    second: {fileID: 2100000, guid: 3a3e89ba0fb464381bb3567b4fc2a2fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: obj_sel_grey
+    second: {fileID: -3037988515251809640, guid: 15e789c3b47b8bc44992798fa743eb19, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: patternA_liquid
+    second: {fileID: 2100000, guid: 97d71eec51f4e4e74ba3b613e2798b8b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

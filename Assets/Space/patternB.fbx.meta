@@ -18,7 +18,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Tray
-    second: {fileID: 2100000, guid: 8e7f6a603ad894015bee2eb96c55aad3, type: 2}
+    second: {fileID: 2100000, guid: 5ccf3fcfc18ef4a44882140e580340b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: obj_sel_grey
+    second: {fileID: -3037988515251809640, guid: 15e789c3b47b8bc44992798fa743eb19, type: 3}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

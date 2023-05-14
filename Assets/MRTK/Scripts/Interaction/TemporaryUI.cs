@@ -18,9 +18,9 @@ public class TemporaryUI : MonoBehaviour
     public GameObject question;
     public GameObject[]answerTexts = new GameObject[4];
     public GameObject[] answerToggles = new GameObject[4];
-    public GameObject labSpace;
+    public GameObject mrtkPlayer;
     public GameObject nextQuestion;
-    public GameObject parentOfnextAnswers;
+   
     public GameObject currrentAnswers;
     string[][] answers =    {
     new string[] {"내 삶으로 대변되는 \n 전부이다", "내 삶 속에 녹아 \n 있는 일부이다" },
@@ -99,13 +99,11 @@ public class TemporaryUI : MonoBehaviour
                 TextWriterSingleton.addValue(answerNumbers[i].ToString());
             }
 
-            labSpace.transform.position = new Vector3(-1.69f, -0.25f, 3.66f);
-            labSpace.transform.rotation = Quaternion.Euler(0, -156.817f, 0);
+            mrtkPlayer.transform.position = new Vector3(-9.898f, 0.11f, -8.779f);
+            mrtkPlayer.transform.rotation = Quaternion.Euler(3.128f, 159.7f, 5.464f);
             currrentAnswers.SetActive(false);
             nextQuestion.SetActive(true);
-            
-            parentOfnextAnswers.SetActive(true);
-            
+          
         }
     }
 }

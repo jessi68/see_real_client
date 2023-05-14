@@ -90,21 +90,21 @@ Material:
     - _Cutoff: 0
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DisortStrength: 5
+    - _DisortStrength: 2
     - _DistortionOnTexture: 0
     - _DstBlend: 10
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _Metallic: 0.553
+    - _Metallic: 0.23
     - _Mode: 3
     - _NormalStrength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 6
     - _ReceiveShadows: 1
-    - _ReflectionStrength: 0.1
+    - _ReflectionStrength: 0.05
     - _Smoothness: 0.34
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

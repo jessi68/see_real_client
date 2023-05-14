@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glass
-    second: {fileID: 2100000, guid: 1302b93dd002b459f96187f55da2c081, type: 2}
+    second: {fileID: 2100000, guid: 3a3e89ba0fb464381bb3567b4fc2a2fd, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -23,7 +23,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: metal_matte
-    second: {fileID: 2100000, guid: 26bdb4b0ef4104d6c9f0e49cf550ccc4, type: 2}
+    second: {fileID: 2100000, guid: 15f007a5c532142bfb841449a4bacc17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: obj_sel_grey
+    second: {fileID: -3037988515251809640, guid: 15e789c3b47b8bc44992798fa743eb19, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
