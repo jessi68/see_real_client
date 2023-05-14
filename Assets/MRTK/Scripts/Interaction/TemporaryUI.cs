@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using System.Runtime.ExceptionServices;
 
 public class TemporaryUI : MonoBehaviour
 {
@@ -18,6 +18,9 @@ public class TemporaryUI : MonoBehaviour
     public GameObject question;
     public GameObject[]answerTexts = new GameObject[4];
     public GameObject[] answerToggles = new GameObject[4];
+    public GameObject labSpace;
+    public GameObject nextQuestion;
+    public GameObject parentOfnextAnswers;
     string[][] answers =    {
     new string[] {"내 삶으로 대변되는 \n 전부이다", "내 삶 속에 녹아 \n 있는 일부이다" },
     new string [] {"나는 과정보다 목표 \n 성취를 중요하게 여긴다 ", "나는 목표 성취보다 \n 과정을 중요하게 여긴다"},
@@ -95,7 +98,14 @@ public class TemporaryUI : MonoBehaviour
                 TextWriterSingleton.addValue(answerNumbers[i].ToString());
             }
 
+            labSpace.transform.position = new Vector3(-1.69f, -0.25f, 3.66f);
+            labSpace.transform.rotation = Quaternion.Euler(0, -156.817f, 0);
 
+            nextQuestion.SetActive(true);
+            
+            
+            parentOfnextAnswers.SetActive(true);
+            
         }
     }
 }
