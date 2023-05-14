@@ -21,6 +21,7 @@ public class TemporaryUI : MonoBehaviour
     public GameObject labSpace;
     public GameObject nextQuestion;
     public GameObject parentOfnextAnswers;
+    public GameObject currrentAnswers;
     string[][] answers =    {
     new string[] {"내 삶으로 대변되는 \n 전부이다", "내 삶 속에 녹아 \n 있는 일부이다" },
     new string [] {"나는 과정보다 목표 \n 성취를 중요하게 여긴다 ", "나는 목표 성취보다 \n 과정을 중요하게 여긴다"},
@@ -100,9 +101,8 @@ public class TemporaryUI : MonoBehaviour
 
             labSpace.transform.position = new Vector3(-1.69f, -0.25f, 3.66f);
             labSpace.transform.rotation = Quaternion.Euler(0, -156.817f, 0);
-
+            currrentAnswers.SetActive(false);
             nextQuestion.SetActive(true);
-            
             
             parentOfnextAnswers.SetActive(true);
             

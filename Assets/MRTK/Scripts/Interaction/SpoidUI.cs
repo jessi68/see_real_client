@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SpoidUI : MonoBehaviour
 {
-    public GameObject[] answerSylinders = new GameObject[4];
     static int currentIndex = 0;
     static int DREAM_COLOR_NUMBER = 6;
+    public GameObject currentQuestion;
+    public GameObject nextQuestion;
+    public GameObject nextAnswers;
+    public GameObject labSpace;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +25,13 @@ public class SpoidUI : MonoBehaviour
 
     public void submitAnswer(int answerNumber)
     {
-
         // outline ³Ö±â
         Debug.Log("spoid ddd" + answerNumber);
         TextWriterSingleton.addValue(answerNumber.ToString());
-    }
-
-    public void selectLargeBox()
-    {
-
+        currentQuestion.SetActive(false);
+        labSpace.transform.position = new Vector3(-1.91f, -0.31f, 3.2f);
+        labSpace.transform.rotation = Quaternion.Euler(0f, -156.817f, 0f);
+        nextQuestion.SetActive(true);
+        nextAnswers.SetActive(true);
     }
 }
