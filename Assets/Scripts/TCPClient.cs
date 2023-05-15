@@ -9,9 +9,12 @@ using System.Runtime.InteropServices;
 
 public class TCPClient : MonoBehaviour
 {
+    private TcpClient client;
+    private NetworkStream networkStream;
+    private StreamWriter streamWriter;
 
     private Socket m_Client;
-    public string m_Ip = "192.168.1.228";
+    public string m_Ip = "192.168.1.15";
     public int m_Port = 60015;
     public string m_SendPacket = "";
     // public Image m_ReceivePacket;
@@ -59,7 +62,7 @@ public class TCPClient : MonoBehaviour
             Debug.Log("Unable to connect to remote end point");
         }
 
-        // client = new TcpClient(ipAddress, Int32.Parse(port));
+        // client = new TcpClient(m_Ip, m_Port);
         // networkStream = client.GetStream();
         // streamWriter = new StreamWriter(networkStream);
     }
@@ -112,19 +115,21 @@ public class TCPClient : MonoBehaviour
             {
                 int fileNameLen = packet[0];
                 // Debug.Log(fileNameLen);
-                byte[] fileName_b = new byte[100];
+                byte[] fileName_b = new byte[fileNameLen];
                 // Debug.Log(fileName_b);
                 Array.Copy(packet, 1, fileName_b, 0, fileNameLen);
                 // Debug.Log(fileName_b);
                 string fileName = Encoding.UTF8.GetString(fileName_b);
                 Debug.Log(fileName);
+                Debug.Log(fileName.Length);
+                Debug.Log(fileName == "lavender_5_zigzag45_1.png");
 
                 byte[] image_b = new byte[1000000];
                 Array.Copy(packet, fileNameLen + 1, image_b, 0, 999998 - fileNameLen);
                 Debug.Log(image_b);
                 ByteArrayToImageAndSave(image_b, fileName);
 
-                ExhibitionManager.GetComponent<ExhibitionManager>().finishGeneration();
+                ExhibitionManager.GetComponent<ExhibitionManager>().finishGeneration(fileName);
                 // DoReceivePacket(); // 받은 값 처리
             }
         }
@@ -162,7 +167,10 @@ public class TCPClient : MonoBehaviour
 
     public void ByteArrayToImageAndSave(byte[] data, string fileName)
     {
-        FileStream fs = new FileStream("./Assets/Resources/Textures/"+fileName+".png", FileMode.Create, FileAccess.Write);
+        string fileDir = Path.Combine("./Assets/Resources/Textures/", fileName);
+        Debug.Log(string.Format("Path: {0}", fileDir));
+        Debug.Log(fileDir);
+        FileStream fs = new FileStream(fileDir, FileMode.Create, FileAccess.Write);
         fs.Write(data, 0, data.Length);
     }
     // String을 바이트 배열로 변환 

@@ -17,6 +17,7 @@ public class ExhibitionManager : MonoBehaviour
     private GameObject TCPClient;
     [SerializeField]
     private GameObject[] Flowers;
+    private int totalFlowerNum;
 
     void Awake()
     {
@@ -26,7 +27,7 @@ public class ExhibitionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        generateFlower();
+        // generateFlower();
         generateFlowerinField();
     }
 
@@ -36,23 +37,38 @@ public class ExhibitionManager : MonoBehaviour
         
     }
 
-    public void finishGeneration() {
-        generateFlower();
+    public void finishGeneration(string fileName) {
+        generateFlower(fileName);
+        getTotalFlowerNum();
+        generateFlowerinField();
+    }
+
+    public void getTotalFlowerNum() {
+        string rootdir = "./Assets/Resources/Textures";
+        string[] files = Directory.GetFiles(rootdir);
+        int _totalFlowerNum = 0;
+        for (int i = 0; i < files.Length; i++) {
+            if (files[i].Substring(files[i].Length - 3) == "png") {
+                _totalFlowerNum += 1;
+            }
+        }
+        totalFlowerNum = _totalFlowerNum;
     }
 
     public void endOfExperiment(string answers) {
         TCPClient.GetComponent<TCPClient>().Send(answers);
     }
 
-    public void generateFlower() {
+    public void generateFlower(string fileName) {
         string rootdir = "./Assets/Resources/Textures";
         string[] files = Directory.GetFiles(rootdir);
         string flowerFile = "";
         for (int i = 0; i < files.Length; i++) {
-            if (files[i].Contains(Name)) {
-                if (files[i].Length > 4 && files[i].Substring(files[i].Length - 3) == "png") {
-                    flowerFile = files[i];
-                }
+            if (files[i].Contains(fileName)) {
+                // if (files[i].Length > 4 && files[i].Substring(files[i].Length - 3) == "png") {
+                //     flowerFile = files[i];
+                // }
+                flowerFile = files[i];
             }
         }
 
@@ -74,30 +90,30 @@ public class ExhibitionManager : MonoBehaviour
         string[] names = new string[] {"이서윤", "허가영", "신민재", "김주하", "전세윤"};
         string rootdir = "./Assets/Resources/Textures";
         string[] files = Directory.GetFiles(rootdir);
-        string[] flowerFiles = new string[5];
-        GameObject[] myFlowers = new GameObject[5];
-        for (int k = 0; k < 5; k++) {
-            string flowerFile = "";
-            for (int i = 0; i < files.Length; i++) {
-                if (files[i].Contains(names[k])) {
-                    if (files[i].Length > 4 && files[i].Substring(files[i].Length - 3) == "png") {
-                        flowerFile = files[i];
-                    }
-                }
+        string[] flowerFiles = new string[totalFlowerNum];
+        GameObject[] myFlowers = new GameObject[totalFlowerNum];
+        int k = 0;
+        for (int i = 0; i< files.Length; i++) {
+            string flowerFile = ""; 
+            if(files[i].Length > 4 && files[i].Substring(files[i].Length - 3) == "png") {
+                flowerFile = files[i];
             }
 
             GameObject myFlower = Flowers[0];
 
             string flowerStructure = flowerFile.Substring(rootdir.Length + 1);
             flowerStructure = flowerStructure.Substring(0, flowerStructure.Length - 9);
-            // Debug.Log(flowerStructure);
-            for (int i = 0; i < Flowers.Length; i++) {
-                if (Flowers[i].ToString().Contains(flowerStructure)) {
-                    myFlower = Flowers[i];
+
+            for(int j = 0; j < Flowers.Length; j++) {
+                if (Flowers[j].ToString().Contains(flowerStructure)) {
+                    myFlower = Flowers[j];
                 }
-            }
+            }  
+
             flowerFiles[k] = flowerFile;
             myFlowers[k] = myFlower;
+
+            k += 1;
         }
         FlowerField.GetComponent<FlowerField>().generateFlower(flowerFiles, myFlowers);
     }
