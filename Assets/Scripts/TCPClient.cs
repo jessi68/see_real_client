@@ -9,6 +9,9 @@ using System.Runtime.InteropServices;
 
 public class TCPClient : MonoBehaviour
 {
+    private TcpClient client;
+    private NetworkStream networkStream;
+    private StreamWriter streamWriter;
 
     private Socket m_Client;
     public string m_Ip = "172.30.1.68";
@@ -23,7 +26,7 @@ public class TCPClient : MonoBehaviour
     void Start()
     {
         InitClient();
-        
+
     }
 
 
@@ -51,17 +54,19 @@ public class TCPClient : MonoBehaviour
         m_ServerIpEndPoint = new IPEndPoint(IPAddress.Parse(m_Ip), m_Port);
         m_Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-        try{
+        try
+        {
             m_Client.Connect(m_ServerIpEndPoint);
         }
-        catch (Exception ex){
+        catch (Exception ex)
+        {
             Debug.Log(ex.ToString());
             Debug.Log("Unable to connect to remote end point");
         }
-
-        // client = new TcpClient(ipAddress, Int32.Parse(port));
-        // networkStream = client.GetStream();
-        // streamWriter = new StreamWriter(networkStream);
+        
+        /* client = new TcpClient(m_Ip, m_Port);
+        networkStream = client.GetStream();
+         streamWriter = new StreamWriter(networkStream);*/
     }
 
     // // void SetSendPacket()
@@ -112,12 +117,14 @@ public class TCPClient : MonoBehaviour
             {
                 int fileNameLen = packet[0];
                 // Debug.Log(fileNameLen);
-                byte[] fileName_b = new byte[100];
+                byte[] fileName_b = new byte[fileNameLen];
                 // Debug.Log(fileName_b);
                 Array.Copy(packet, 1, fileName_b, 0, fileNameLen);
                 // Debug.Log(fileName_b);
                 string fileName = Encoding.UTF8.GetString(fileName_b);
                 Debug.Log(fileName);
+                Debug.Log(fileName.Length);
+                Debug.Log(fileName == "lavender_5_zigzag45_1.png");
 
                 byte[] image_b = new byte[1000000];
                 Array.Copy(packet, fileNameLen + 1, image_b, 0, 999998 - fileNameLen);
@@ -162,7 +169,10 @@ public class TCPClient : MonoBehaviour
 
     public void ByteArrayToImageAndSave(byte[] data, string fileName)
     {
-        FileStream fs = new FileStream("./Assets/Resources/Textures/"+fileName+".png", FileMode.Create, FileAccess.Write);
+        string fileDir = Path.Combine("./Assets/Resources/Textures/", fileName);
+        Debug.Log(string.Format("Path: {0}", fileDir));
+        Debug.Log(fileDir);
+        FileStream fs = new FileStream(fileDir, FileMode.Create, FileAccess.Write);
         fs.Write(data, 0, data.Length);
     }
     // String을 바이트 배열로 변환 
