@@ -5,7 +5,7 @@ using System.IO;
 
 public static class TextWriterSingleton 
 {
-    static string total = "SMH\n";
+    static string total = "SMJ\n1,";
     static string m_sendPacket = "SMJ\n1,1,1,2,1,1,2,3\n3,320,400,80,400,740,210,650,470,120\n2,720,230,180,650,740,140";
 
     public static void WriteTxt(string filePath)

@@ -10,6 +10,8 @@ public class SpoidUI : MonoBehaviour
     public GameObject nextQuestion;
     public GameObject nextAnswers;
     public GameObject mrtkPlayer;
+    public Vector3 position;
+    public Vector3 rotation;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +31,8 @@ public class SpoidUI : MonoBehaviour
         Debug.Log("spoid ddd" + answerNumber);
         TextWriterSingleton.addValue(answerNumber.ToString());
         currentQuestion.SetActive(false);
-        mrtkPlayer.transform.position = new Vector3(-1.91f, -0.31f, 3.2f);
-        mrtkPlayer.transform.rotation = Quaternion.Euler(0f, -156.817f, 0f);
+        mrtkPlayer.transform.position = position;
+        mrtkPlayer.transform.rotation = Quaternion.Euler(rotation);
         nextQuestion.SetActive(true);
         nextAnswers.SetActive(true);
     }

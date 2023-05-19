@@ -100,7 +100,7 @@ public class TemporaryUI : MonoBehaviour
             }
 
             mrtkPlayer.transform.position = new Vector3(-9.898f, 0.11f, -8.779f);
-            mrtkPlayer.transform.rotation = Quaternion.Euler(3.128f, 159.7f, 5.464f);
+            mrtkPlayer.transform.rotation = Quaternion.Euler(-1.814f, 206.092f, 6.028f);
             currrentAnswers.SetActive(false);
             nextQuestion.SetActive(true);
           

@@ -11,7 +11,7 @@ public class CameraStepFirst : MonoBehaviour
     void Start()
     {
         timeElasped = 0;
-        waitTime = 1f;
+        waitTime = 0.5f;
         isUpdated = false;
     }
 
@@ -19,19 +19,22 @@ public class CameraStepFirst : MonoBehaviour
     void Update()
     {
         timeElasped += Time.deltaTime;
-        Debug.Log(timeElasped);
+      
         if(timeElasped >= waitTime && isUpdated == false)
         {
-            Debug.Log("well done");
             isUpdated = true;
 
             // first place
-            this.transform.position = new Vector3(-14.39f, 2.01f, -8.84f);
-            this.transform.rotation = Quaternion.Euler(6.145f, -158.08f, 1.361f);
+            //this.transform.position = new Vector3(-13.17f, 1.45f, -3.27f);
+            //this.transform.rotation = Quaternion.Euler(-3.708f, -224.607f, 5.089f);
+
+            // strange
+            //transform.position = new Vector3(-7.12f, -4.52f, -2.62f);
+            //transform.rotation = Quaternion.Euler(38.862f, -1.054f, -37.434f);
 
             // lab space 
-            transform.position = new Vector3(-9.828f, 0.181f, -8.962f);
-            transform.rotation = Quaternion.Euler(3.128f, 159.7f, 5.464f);
+            transform.position = new Vector3(-11.004f, 1.222f, -10.093f);
+            transform.rotation = Quaternion.Euler(-6.234f, 310.203f, 4.528f);
         }
     }
 }
