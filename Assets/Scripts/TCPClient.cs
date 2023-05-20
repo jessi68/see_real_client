@@ -14,6 +14,7 @@ public class TCPClient : MonoBehaviour
     private StreamWriter streamWriter;
 
     private Socket m_Client;
+    // ip 주소 업데이트 더케이브
     public string m_Ip = "172.30.1.68";
     public int m_Port = 60015;
     public string m_SendPacket = "";

@@ -20,7 +20,7 @@ public class TurnOnLight : MonoBehaviour
         timeElasped += Time.deltaTime;
         if(timeElasped > waitTime)
         {
-            basicLight.SetActive(true);
+            //basicLight.SetActive(true);
         }
     }
 }

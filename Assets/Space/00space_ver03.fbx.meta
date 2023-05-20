@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1469398588e494b21b65f4e8ed7ed101
+guid: e6baf30491c1d41ba8f700083424ddeb
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable: []
@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Grass 01 - Shader
-    second: {fileID: 2100000, guid: ba77e96072daf4ea19ef06c0d4bad6a8, type: 2}
+    second: {fileID: 2100000, guid: 800bece09494c4ca8af18c63a99f6991, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -24,6 +24,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: floor
     second: {fileID: 2100000, guid: b44962d9e43d04b5887457a2cda0cc19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flowerpatter_glass
+    second: {fileID: 2100000, guid: b17aae741ef1c40c19217e191330aef0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -38,7 +43,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: liquid
-    second: {fileID: 2100000, guid: 15a2f80540994464aaf6a74ec5dd52f4, type: 2}
+    second: {fileID: 2100000, guid: eb95fdc69f4e44221af35ec5700d2d2c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -58,7 +63,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: plastic_black
-    second: {fileID: 2100000, guid: c0d2a565743d243c0bb6f1d9eff28645, type: 2}
+    second: {fileID: 2100000, guid: 185b1c0585e0e4ddaac98d56de36d4b4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -72,33 +77,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: rose_01_06
-    second: {fileID: 2100000, guid: d6012e0fc675e494b82c93813157bf01, type: 2}
+      name: sign_metal
+    second: {fileID: 2100000, guid: d8dbb99aacf9546b59c27ff4641e46af, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: samples_black
-    second: {fileID: 2100000, guid: 17c09d8f5122548c4b0c70d942b62d13, type: 2}
+      name: sign_step02
+    second: {fileID: 2100000, guid: e65dc8e5451a84a54b17d847be68c8c0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: samples_metal
-    second: {fileID: 2100000, guid: 3c78ed3f0401b45359194ccca3f954d8, type: 2}
+      name: sign_step03_entrance
+    second: {fileID: 2100000, guid: ceb479081c0bb4b22a0a4c3ddc84dd98, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: samples_white
-    second: {fileID: 2100000, guid: 551c75240670845d58c1b204c711716b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tulip_single_leaf
-    second: {fileID: 2100000, guid: d2431393292fa4bbdbe38dcb4d54d7d2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tulip_single_stem
-    second: {fileID: 2100000, guid: 121184e5e2e1240e3b8beaa0fa36ec64, type: 2}
+      name: sign_step03_stair
+    second: {fileID: 2100000, guid: b0358df62baf249d9b31dae51ce70154, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -107,63 +102,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: wall_step01_window
+    second: {fileID: 2100000, guid: 4836cb57c6efb41839f77c0ea6193986, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: wall_tile
     second: {fileID: 2100000, guid: 82ae4c18030034adeb94a4565ad076c3, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Plaster001_2K_Color
-    second: {fileID: 2800000, guid: 82f07d38b97764d92b91a04d76f848b8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Plaster001_2K_NormalDX
-    second: {fileID: 2800000, guid: 9c265d838edff43abb355da7d48a9573, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Plaster001_2K_Roughness
-    second: {fileID: 2800000, guid: a141258d39d2a4c9a9056a42667d8b44, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Tiles107_2K_Color
-    second: {fileID: 2800000, guid: 62bd4ef28ff8e405e947b7ce66355260, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Tiles107_2K_NormalDX
-    second: {fileID: 2800000, guid: 94220306be60646df9c0ef4167f3687d, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: test_alpha
-    second: {fileID: 2800000, guid: 722840a4d5b87463db144a66f23b2047, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: test_color
-    second: {fileID: 2800000, guid: 568dc0ff31b4d4f0791ede07804f473b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tulip_single_leaf
-    second: {fileID: 2800000, guid: 64f449cd3ae0840c78db3d57f8eb7c15, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tulip_single_leaf_nor
-    second: {fileID: 2800000, guid: 784be9455c2854a49bd472c3921ae825, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tulip_single_stem
-    second: {fileID: 2800000, guid: 4bb06d5576b17496bbad3e467fb92fdb, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: tulip_single_stem_nor
-    second: {fileID: 2800000, guid: 4b4d30d782de24eada1baae961e2c394, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -205,7 +150,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
