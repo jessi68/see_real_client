@@ -19,9 +19,13 @@ public class PatternPaper : MonoBehaviour
 
     public void changePattern(string flowerFile, GameObject myFlower)
     {
+        Debug.Log("changePatternPaper");
         byte[] byteTexture = System.IO.File.ReadAllBytes(flowerFile);
+        Debug.Log("readfile");
         Texture2D pattern = new Texture2D(0, 0);
         pattern.LoadImage(byteTexture);
+        Debug.Log("generateImage");
         gameObject.GetComponent<Renderer>().material.SetTexture("_BaseMap", pattern);
+        Debug.Log("End");
     }
 }

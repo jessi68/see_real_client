@@ -169,7 +169,16 @@ public class TCPClient : MonoBehaviour
         Debug.Log(string.Format("Path: {0}", fileDir));
         Debug.Log(fileDir);
         FileStream fs = new FileStream(fileDir, FileMode.Create, FileAccess.Write);
-        fs.Write(data, 0, data.Length);
+        try
+        {
+            fs.Write(data, 0, data.Length);
+            fs.Close();
+        }
+        catch
+        {
+            fs.Close();
+            Debug.Log("File Save Failed");
+        }
     }
     // String을 바이트 배열로 변환 
     private byte[] StringToByte(string str)

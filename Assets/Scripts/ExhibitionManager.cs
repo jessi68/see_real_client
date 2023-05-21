@@ -83,7 +83,9 @@ public class ExhibitionManager : MonoBehaviour
             }
         }
         Flower.GetComponent<Flower>().changePattern(flowerFile, myFlower);
+        Debug.Log("flowerGenerate");
         PatternPaper.GetComponent<PatternPaper>().changePattern(flowerFile, myFlower);
+        Debug.Log("patternGenerate");
     }
 
     public void generateFlowerinField() {
@@ -102,7 +104,9 @@ public class ExhibitionManager : MonoBehaviour
             GameObject myFlower = Flowers[0];
 
             string flowerStructure = flowerFile.Substring(rootdir.Length + 1);
+            Debug.Log(flowerStructure);
             flowerStructure = flowerStructure.Substring(0, flowerStructure.Length - 9);
+            Debug.Log(flowerStructure);
 
             for(int j = 0; j < Flowers.Length; j++) {
                 if (Flowers[j].ToString().Contains(flowerStructure)) {
