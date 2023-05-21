@@ -28,7 +28,7 @@ public class ExhibitionManager : MonoBehaviour
     void Start()
     {
         // generateFlower();
-        generateFlowerinField();
+        // generateFlowerinField();
     }
 
     // Update is called once per frame

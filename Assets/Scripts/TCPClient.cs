@@ -121,8 +121,6 @@ public class TCPClient : MonoBehaviour
                 // Debug.Log(fileName_b);
                 string fileName = Encoding.UTF8.GetString(fileName_b);
                 Debug.Log(fileName);
-                Debug.Log(fileName.Length);
-                Debug.Log(fileName == "lavender_5_zigzag45_1.png");
 
                 byte[] image_b = new byte[1000000];
                 Array.Copy(packet, fileNameLen + 1, image_b, 0, 999998 - fileNameLen);
