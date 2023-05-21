@@ -34,8 +34,8 @@ public class CameraStepFirst : MonoBehaviour
 
             // lab space 
 
-            transform.position = new Vector3(-9.17f, 0.261f, -8.937f);
-            transform.rotation = Quaternion.Euler(-1.491f, -114.793f, 7.555f);
+            transform.position = new Vector3(-9.944f, 0.113f, -8.873f);
+            transform.rotation = Quaternion.Euler(-1.814f, -153.908f, 6.028f);
         }
     }
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class EmotionPeridoicTable : MonoBehaviour
 {
     bool[] selected = new bool[18];
+    public GameObject currentQuestion;
+    public GameObject currentAnswer;
+    public GameObject nextQuestion;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,7 @@ public class EmotionPeridoicTable : MonoBehaviour
 
     }
 
-    void Toggle(int index)
+    public void Toggle(int index)
     {
         if (selected[index])
         {
@@ -32,7 +35,7 @@ public class EmotionPeridoicTable : MonoBehaviour
         }
     }
 
-    void Complete()
+    public void Complete()
     {
         string content = "";
         int selectedNumber = 0;
@@ -48,6 +51,12 @@ public class EmotionPeridoicTable : MonoBehaviour
             }
         }
 
-        TextWriterSingleton.addValue(selectedNumber + "," + content.Substring(0, content.Length - 1));
+        if (selectedNumber > 0)
+        {
+            TextWriterSingleton.addValue(selectedNumber + "," + content.Substring(0, content.Length - 1));
+        }
+        currentQuestion.SetActive(false);
+        currentAnswer.SetActive(false);
+        nextQuestion.SetActive(true);
     }
 }

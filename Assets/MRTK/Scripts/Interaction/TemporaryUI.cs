@@ -20,7 +20,7 @@ public class TemporaryUI : MonoBehaviour
     public GameObject[] answerToggles = new GameObject[4];
     public GameObject mrtkPlayer;
     public GameObject nextQuestion;
-    public GameObject clipBoard;
+    public GameObject canvas;
    
     public GameObject currrentAnswers;
     string[][] answers =    {
@@ -76,8 +76,14 @@ public class TemporaryUI : MonoBehaviour
         if (currentIndex != questions.Length)
         {
             question.transform.GetComponent<TMP_Text>().text = questions[currentIndex];
+
+            for(int i = 0; i < 4; i++)
+            {
+                answerTexts[i].SetActive(false);
+            }
             for (int i = 0; i < answers[currentIndex].Length; i++)
             {
+                answerTexts[i].SetActive(true);
                 answerTexts[i].transform.GetComponent<TMP_Text>().text = answers[currentIndex][i];
             }
 
@@ -101,10 +107,10 @@ public class TemporaryUI : MonoBehaviour
             }
 
             mrtkPlayer.transform.position = new Vector3(-9.898f, 0.11f, -8.779f);
-            mrtkPlayer.transform.rotation = Quaternion.Euler(-1.814f, 206.092f, 6.028f);
+            mrtkPlayer.transform.rotation = Quaternion.Euler(-6.267f, -75.223f, -0.588f);
             currrentAnswers.SetActive(false);
             nextQuestion.SetActive(true);
-            clipBoard.SetActive(false);
+            canvas.SetActive(false);
           
         }
     }
