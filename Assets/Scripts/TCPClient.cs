@@ -35,7 +35,7 @@ public class TCPClient : MonoBehaviour
         Receive();
         if (Input.GetKeyDown(KeyCode.S))
         {
-            string m_SendPacket = "SMJ\n1,1,1,2,1,1,2,3\n3,320,400,80,400,740,210,650,470,120\n2,720,230,180,650,740,140";
+            string m_SendPacket = "1,1,1,2,1,1\n2,3\n3,2\n320,400,80,400,740,210,650,470,120\n720,230,180,650,740,140";
             Debug.Log("Send");
             Send(m_SendPacket);
         }
