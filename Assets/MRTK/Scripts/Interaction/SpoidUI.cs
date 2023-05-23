@@ -7,7 +7,6 @@ public class SpoidUI : MonoBehaviour
     static int currentIndex = 0;
     static int DREAM_COLOR_NUMBER = 6;
     public GameObject currentQuestion;
-    public GameObject currentAnswers;
     public GameObject nextQuestion;
     public GameObject nextAnswers;
     public GameObject mrtkPlayer;
@@ -30,13 +29,8 @@ public class SpoidUI : MonoBehaviour
     {
         // outline ³Ö±â
         Debug.Log("spoid ddd" + answerNumber);
-        
         TextWriterSingleton.addValue(answerNumber.ToString());
         currentQuestion.SetActive(false);
-        if(currentAnswers != null)
-        {
-            currentAnswers.SetActive(false);
-        }
         mrtkPlayer.transform.position = position;
         mrtkPlayer.transform.rotation = Quaternion.Euler(rotation);
         nextQuestion.SetActive(true);

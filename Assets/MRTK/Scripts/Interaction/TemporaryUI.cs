@@ -20,14 +20,13 @@ public class TemporaryUI : MonoBehaviour
     public GameObject[] answerToggles = new GameObject[4];
     public GameObject mrtkPlayer;
     public GameObject nextQuestion;
-    public GameObject canvas;
    
     public GameObject currrentAnswers;
     string[][] answers =    {
-    new string[] {"1.내 삶으로 대변되는 \n 전부이다", "2.내 삶 속에 녹아 \n 있는 일부이다" },
-    new string [] {"1. 나는 과정보다 목표 \n 성취를 중요하게 여긴다 ", "2. 나는 목표 성취보다 \n 과정을 중요하게 여긴다"},
-    new string [] {"1. 일어날 수 없어도, \n 그 자체로 의미가 있다", "2. 일어날 수 없다면, \n 아무 의미 없다", "3. 이룬다 했을 때, \n 내 삶에 미치는 영향이 크다", "4. 이룬다 해도, \n 내 삶의 일부일 뿐이다" },
-    new string [] { "1. 두고두고 새길 수 있게 \n 어딘가에 기록한다", "2. 내 이야기를 들어줄 \n 다른 사람에게 공유한다", "3. 머릿속 어딘가에 \n 흘러가게 내버려둔다" }
+    new string[] {"내 삶으로 대변되는 \n 전부이다", "내 삶 속에 녹아 \n 있는 일부이다" },
+    new string [] {"나는 과정보다 목표 \n 성취를 중요하게 여긴다 ", "나는 목표 성취보다 \n 과정을 중요하게 여긴다"},
+    new string [] {"일어날 수 없어도, \n 그 자체로 의미가 있다", "일어날 수 없다면, \n 아무 의미 없다", "이룬다 했을 때, \n 내 삶에 미치는 영향이 크다", "이룬다 해도, \n 내 삶의 일부일 뿐이다" },
+    new string [] { "두고두고 새길 수 있게 \n 어딘가에 기록한다", "내 이야기를 들어줄 \n 다른 사람에게 공유한다", "머릿속 어딘가에 \n 흘러가게 내버려둔다" }
     };
     static int currentIndex = 0;
     static int[] answerNumbers;
@@ -76,14 +75,8 @@ public class TemporaryUI : MonoBehaviour
         if (currentIndex != questions.Length)
         {
             question.transform.GetComponent<TMP_Text>().text = questions[currentIndex];
-
-            for(int i = 0; i < 4; i++)
-            {
-                answerTexts[i].SetActive(false);
-            }
             for (int i = 0; i < answers[currentIndex].Length; i++)
             {
-                answerTexts[i].SetActive(true);
                 answerTexts[i].transform.GetComponent<TMP_Text>().text = answers[currentIndex][i];
             }
 
@@ -107,10 +100,9 @@ public class TemporaryUI : MonoBehaviour
             }
 
             mrtkPlayer.transform.position = new Vector3(-9.898f, 0.11f, -8.779f);
-            mrtkPlayer.transform.rotation = Quaternion.Euler(-6.267f, -75.223f, -0.588f);
+            mrtkPlayer.transform.rotation = Quaternion.Euler(-1.814f, 206.092f, 6.028f);
             currrentAnswers.SetActive(false);
             nextQuestion.SetActive(true);
-            canvas.SetActive(false);
           
         }
     }

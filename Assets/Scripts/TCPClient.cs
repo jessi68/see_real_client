@@ -14,10 +14,9 @@ public class TCPClient : MonoBehaviour
     private StreamWriter streamWriter;
 
     private Socket m_Client;
-    // ip 주소 업데이트 더케이브
-    public string m_Ip = "172.30.1.68";
-    public int m_Port = 60015;
-    public string m_SendPacket = "";
+    private string m_Ip = "172.30.1.7";
+    private int m_Port = 50001;
+    private string m_SendPacket = "";
     // public Image m_ReceivePacket;
     private IPEndPoint m_ServerIpEndPoint;
     private EndPoint m_RemoteEndPoint;
@@ -123,13 +122,9 @@ public class TCPClient : MonoBehaviour
                 Array.Copy(packet, 1, fileName_b, 0, fileNameLen);
                 // Debug.Log(fileName_b);
                 string fileName = Encoding.UTF8.GetString(fileName_b);
-                Debug.Log(fileName);
-                Debug.Log(fileName.Length);
-                Debug.Log(fileName == "lavender_5_zigzag45_1.png");
 
                 byte[] image_b = new byte[1000000];
                 Array.Copy(packet, fileNameLen + 1, image_b, 0, 999998 - fileNameLen);
-                Debug.Log(image_b);
                 ByteArrayToImageAndSave(image_b, fileName);
 
                 ExhibitionManager.GetComponent<ExhibitionManager>().finishGeneration(fileName);
@@ -174,7 +169,15 @@ public class TCPClient : MonoBehaviour
         Debug.Log(string.Format("Path: {0}", fileDir));
         Debug.Log(fileDir);
         FileStream fs = new FileStream(fileDir, FileMode.Create, FileAccess.Write);
-        fs.Write(data, 0, data.Length);
+        try
+        {
+            fs.Write(data, 0, data.Length);
+            fs.Close();
+        }
+        catch
+        {
+            fs.Close();
+        }
     }
     // String을 바이트 배열로 변환 
     private byte[] StringToByte(string str)

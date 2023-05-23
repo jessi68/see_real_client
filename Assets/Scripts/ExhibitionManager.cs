@@ -28,6 +28,7 @@ public class ExhibitionManager : MonoBehaviour
     void Start()
     {
         // generateFlower();
+        getTotalFlowerNum();
         generateFlowerinField();
     }
 
@@ -100,6 +101,7 @@ public class ExhibitionManager : MonoBehaviour
             }
 
             GameObject myFlower = Flowers[0];
+            Debug.Log(flowerFile);
 
             string flowerStructure = flowerFile.Substring(rootdir.Length + 1);
             flowerStructure = flowerStructure.Substring(0, flowerStructure.Length - 9);
@@ -110,7 +112,7 @@ public class ExhibitionManager : MonoBehaviour
                 }
             }  
 
-            flowerFiles[k] = flowerFile;
+            flowerFiles[k] = flowerFile;    
             myFlowers[k] = myFlower;
 
             k += 1;
