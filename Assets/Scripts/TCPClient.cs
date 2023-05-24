@@ -6,18 +6,14 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 public class TCPClient : MonoBehaviour
 {
-    private TcpClient client;
-    private NetworkStream networkStream;
-    private StreamWriter streamWriter;
-
     private Socket m_Client;
     private string m_Ip = "172.30.1.7";
     private int m_Port = 50001;
     private string m_SendPacket = "";
-    // public Image m_ReceivePacket;
     private IPEndPoint m_ServerIpEndPoint;
     private EndPoint m_RemoteEndPoint;
     [SerializeField]
@@ -33,23 +29,15 @@ public class TCPClient : MonoBehaviour
     void Update()
     {
         Receive();
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             string m_SendPacket = "1,1,1,2,1,1\n2,3\n3,2\n320,400,80,400,740,210,650,470,120\n720,230,180,650,740,140";
             Debug.Log("Send");
             Send(m_SendPacket);
         }
     }
-
-    // void OnApplicationQuit()
-    // {
-    //     CloseClient();
-    // }
-
     void InitClient()
     {
-        // SendPacket에 배열이 있으면 선언 해 주어야 함.
-        // m_SendPacket.m_IntArray = new int[2];
 
         m_ServerIpEndPoint = new IPEndPoint(IPAddress.Parse(m_Ip), m_Port);
         m_Client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -63,21 +51,7 @@ public class TCPClient : MonoBehaviour
             Debug.Log(ex.ToString());
             Debug.Log("Unable to connect to remote end point");
         }
-        
-        /* client = new TcpClient(m_Ip, m_Port);
-        networkStream = client.GetStream();
-         streamWriter = new StreamWriter(networkStream);*/
     }
-
-    // // void SetSendPacket()
-    // // {
-    // //     m_SendPacket.m_BoolVariable = true;
-    // //     m_SendPacket.m_IntVariable = 13;
-    // //     m_SendPacket.m_IntArray[0] = 7;
-    // //     m_SendPacket.m_IntArray[1] = 47;
-    // //     m_SendPacket.m_FloatlVariable = 2020;
-    // //     m_SendPacket.m_StringlVariable = "Coder Zero";
-    // // }
 
     public void Send(string m_SendPacket)
     {
@@ -109,64 +83,33 @@ public class TCPClient : MonoBehaviour
 
             catch (Exception ex)
             {
-                //Debug.Log(ex.ToString());
+                Debug.Log(ex.ToString());
                 return;
             }
 
             if (receive > 0)
             {
                 int fileNameLen = packet[0];
-                // Debug.Log(fileNameLen);
                 byte[] fileName_b = new byte[fileNameLen];
-                // Debug.Log(fileName_b);
                 Array.Copy(packet, 1, fileName_b, 0, fileNameLen);
-                // Debug.Log(fileName_b);
                 string fileName = Encoding.UTF8.GetString(fileName_b);
 
                 byte[] image_b = new byte[1000000];
+                Debug.Log(packet[999997]);
+                Debug.Log(packet[999998]);
+                Debug.Log(packet[999999]);
                 Array.Copy(packet, fileNameLen + 1, image_b, 0, 999998 - fileNameLen);
                 ByteArrayToImageAndSave(image_b, fileName);
 
+                Thread.Sleep(3000);
                 ExhibitionManager.GetComponent<ExhibitionManager>().finishGeneration(fileName);
-                // DoReceivePacket(); // 받은 값 처리
             }
         }
     }
 
-    // void DoReceivePacket()
-    // {
-    //     // Debug.LogFormat($"m_IntArray[0] = {m_ReceivePacket.m_IntArray[0]} " +
-    //     //    $"m_IntArray[1] = {m_ReceivePacket.m_IntArray[1]} " +
-    //     //    $"FloatlVariable = {m_ReceivePacket.m_FloatlVariable} " +
-    //     //    $"StringlVariable = {m_ReceivePacket.m_StringlVariable}" +
-    //     //    $"BoolVariable = {m_ReceivePacket.m_BoolVariable} " +
-    //     //    $"IntlVariable = {m_ReceivePacket.m_IntVariable} ");
-    //     //출력: m_IntArray[0] = 7 m_IntArray[1] = 47 FloatlVariable = 2020 StringlVariable = Coder ZeroBoolVariable = True IntlVariable = 13 
-    // }
-
-    // void CloseClient()
-    // {
-    //     if (streamWriter != null)
-    //     {
-    //         streamWriter.Close();
-    //         streamWriter = null;
-    //     }
-    //     if (streamReader != null)
-    //     {
-    //         streamReader.Close();
-    //         streamReader = null;
-    //     }
-    //     if (networkStream != null)
-    //     {
-    //         networkStream.Close();
-    //         networkStream = null;
-    //     }
-    // }
-
-    public void ByteArrayToImageAndSave(byte[] data, string fileName)
+    public async void ByteArrayToImageAndSave(byte[] data, string fileName)
     {
         string fileDir = Path.Combine("./Assets/Resources/Textures/", fileName);
-        Debug.Log(string.Format("Path: {0}", fileDir));
         Debug.Log(fileDir);
         FileStream fs = new FileStream(fileDir, FileMode.Create, FileAccess.Write);
         try

@@ -2,41 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlowerField : MonoBehaviour
+public class FlowerIndoor : MonoBehaviour
 {
-    
-    float[] positionX = new float[1000];
-    float[] positionZ = new float[1000];
     private GameObject FlowerPattern;
-
     private Dictionary<string, float> flowerScales = new Dictionary<string, float>();
 
     // Start is called before the first frame update
     void Awake()
     {
-        flowerScales.Add("dandelion2", 4.2f);
-        flowerScales.Add("lavender2", 4.2f);
-        flowerScales.Add("daisies", 2.7f);
-        flowerScales.Add("rose5", 3.3f);
-        flowerScales.Add("daisy", 4.1f);
-        flowerScales.Add("roes7", 2.4f);
-        flowerScales.Add("rose8", 2.1f);
-        flowerScales.Add("rosebush", 2.7f);
-        flowerScales.Add("smallbush", 3.9f);
-        flowerScales.Add("branch", 36f);
-        flowerScales.Add("minitree", 2.6f);
+        flowerScales.Add("dandelion2", 2.8f);
+        flowerScales.Add("lavender2", 2.8f);
+        flowerScales.Add("daisies", 1.8f);
+        flowerScales.Add("rose5", 2.2f);
+        flowerScales.Add("daisy", 2.7f);
+        flowerScales.Add("roes7", 1.6f);
+        flowerScales.Add("rose8", 1.4f);
+        flowerScales.Add("rosebush", 1.8f);
+        flowerScales.Add("smallbush", 2.6f);
+        flowerScales.Add("branch", 24f);
+        flowerScales.Add("minitree", 1.7f);
     }
 
-    void Start() {
-        string fileDir = "./Assets/Resources/Position/positionOutdoor.txt";
-        string positionData = System.IO.File.ReadAllText(fileDir);
-        string[] positionDataArray = positionData.Split('\n');
-        string[] positions = new string[3];
-        for (int i = 0; i < positionDataArray.Length; i++) {
-            positions = positionDataArray[i].Split(',');
-            positionX[i] = float.Parse(positions[0]);
-            positionZ[i] = float.Parse(positions[2]);
-        }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -45,10 +35,9 @@ public class FlowerField : MonoBehaviour
         
     }
 
-    public void generateFlower(string[] flowerFiles, GameObject[] _myFlowers)
+    public void generateFlower(string[] flowerFiles, GameObject[] _myFlowers, int length)
     {
-        Debug.Log(flowerFiles.Length);
-        for (int i = 0; i < flowerFiles.Length; i++) {
+        for (int i = 0; i < length; i++) {
             string flowerFile = flowerFiles[i];
             GameObject _myFlower = _myFlowers[i];
             int index = i;
@@ -56,8 +45,8 @@ public class FlowerField : MonoBehaviour
             childIndexString = childIndexString.Substring(0, 1);
             int childIndex = int.Parse(childIndexString);
             GameObject myFlower = Instantiate(_myFlower, new Vector3(0, 0, 0), Quaternion.identity);
-            myFlower.transform.parent = this.transform;
-            myFlower.transform.localPosition = new Vector3(positionX[index], 0.035f, positionZ[index]);
+            myFlower.transform.parent = this.transform.GetChild(i);
+            myFlower.transform.localPosition = new Vector3(0,0,0);
 
             string flowerName = flowerFile.Split('_')[0];
             string flowerType = flowerFile.Split('_')[1];
@@ -73,7 +62,7 @@ public class FlowerField : MonoBehaviour
             }
 
             myFlower.transform.localScale = new Vector3(flowerScale, flowerScale, flowerScale);
-            FlowerPattern = transform.GetChild(i+1).GetChild(childIndex).gameObject;
+            FlowerPattern = transform.GetChild(i).GetChild(0).GetChild(childIndex).gameObject;
             byte[] byteTexture = System.IO.File.ReadAllBytes(flowerFile);
             Texture2D pattern = new Texture2D(0, 0);
             pattern.LoadImage(byteTexture);
