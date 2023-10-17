@@ -95,9 +95,6 @@ public class TCPClient : MonoBehaviour
                 string fileName = Encoding.UTF8.GetString(fileName_b);
 
                 byte[] image_b = new byte[1000000];
-                Debug.Log(packet[999997]);
-                Debug.Log(packet[999998]);
-                Debug.Log(packet[999999]);
                 Array.Copy(packet, fileNameLen + 1, image_b, 0, 999998 - fileNameLen);
                 ByteArrayToImageAndSave(image_b, fileName);
 
@@ -107,7 +104,7 @@ public class TCPClient : MonoBehaviour
         }
     }
 
-    public async void ByteArrayToImageAndSave(byte[] data, string fileName)
+    public void ByteArrayToImageAndSave(byte[] data, string fileName)
     {
         string fileDir = Path.Combine("./Assets/Resources/Textures/", fileName);
         Debug.Log(fileDir);
